@@ -9,7 +9,7 @@ chai.use(chaiHttp);
 describe('/POST commands', () => {
   it('it should return attachments', (done) => {
     chai.request(app.express)
-      .post('/api/v1/command/call')
+      .post('/api/v1/commands/call')
       .end((err, res) => {
         console.log(res.body);
         res.should.have.status(200);

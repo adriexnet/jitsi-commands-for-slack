@@ -1,4 +1,5 @@
 import { Router, Request, Response, NextFunction } from 'express';
+import { v1 } from 'uuid';
 
 export class CommandRouter {
   public router: Router;
@@ -18,7 +19,7 @@ export class CommandRouter {
       text: 'Lets do a call',
       attachments: [
         {
-          text: '`https://meet.jit.si/adsa`',
+          text: `https://meet.jit.si/${req.body.text ? req.body.text : v1()}`,
         },
       ],
     });
