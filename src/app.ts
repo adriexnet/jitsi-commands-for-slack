@@ -29,7 +29,7 @@ export class App {
   }
 
   public start(): void {
-    const port = process.env.SERVER_PORT ? process.env.SERVER_PORT : 8080;
+    const port = process.env.PORT ? process.env.PORT : 8080;
     this.express.listen(
       port,
       () => logger.info(`listening on port ${port}!`),

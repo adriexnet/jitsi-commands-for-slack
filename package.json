@@ -2,7 +2,7 @@
   "name": "jitsi-commands-for-slack",
   "version": "1.0.0",
   "description": "commands to use jitsi",
-  "main": "dist/index",
+  "main": "dist/index.js",
   "scripts": {
     "test": "mocha src/**/*.spec.ts -r ts-node/register -r dotenv/config",
     "lint": "tslint --fix -c tslint.json -p tsconfig.json && exit 0 || exit 1",
