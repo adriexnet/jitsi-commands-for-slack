@@ -29,9 +29,10 @@ export class App {
   }
 
   public start(): void {
+    const port = process.env.SERVER_PORT ? process.env.SERVER_PORT : 8080;
     this.express.listen(
-      process.env.SERVER_PORT,
-      () => logger.info(`listening on port ${process.env.SERVER_PORT}!`),
+      port,
+      () => logger.info(`listening on port ${port}!`),
     );
   }
 
